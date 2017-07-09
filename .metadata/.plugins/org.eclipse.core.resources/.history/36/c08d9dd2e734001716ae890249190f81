@@ -1,0 +1,17 @@
+package com.junit.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import com.rbn.practice.StringHelper;
+
+public class StringHelperTest {
+
+	@Test
+	public void testStrWith2CharReversed() {
+		StringHelper stringHelper = new StringHelper();
+		AssertEquals("BA", stringHelper.SwapLast2Char("AB");
+	}
+
+}

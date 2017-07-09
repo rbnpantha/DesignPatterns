@@ -1,0 +1,8 @@
+package edu.asd.iteratordesignpattern;
+
+public class abstract MyName {
+
+	private abstract int name;
+	
+	public abstract getName();
+}

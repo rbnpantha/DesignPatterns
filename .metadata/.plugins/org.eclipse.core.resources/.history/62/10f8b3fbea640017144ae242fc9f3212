@@ -1,0 +1,37 @@
+package edu.stockobserver;
+
+public class GrabStocks {
+	
+	public static void main(String[] args){
+		
+		/*create the subject object 
+		it will handle updating all observers
+		as well as deleting and adding them*/
+		
+		StockGrabber stockGrabber = new StockGrabber();
+		
+		//Create an observer where updates will be sent from subject
+		
+		StockObserver observer1 = new StockObserver(stockGrabber);
+		
+		stockGrabber.setIBMPrice(197.24);
+		stockGrabber.setApplePrice(278.54);
+		stockGrabber.setGooglePrice(185.22);
+		
+		StockObserver observer2 = new StockObserver(stockGrabber);
+		
+		stockGrabber.setIBMPrice(199.25);
+		stockGrabber.setApplePrice(288.54);
+		stockGrabber.setGooglePrice(195.22);
+		
+		//Delete one of the observers
+		
+		stockGrabber.unregister(observer2);
+		
+		stockGrabber.setIBMPrice(199.25);
+		stockGrabber.setApplePrice(288.54);
+		stockGrabber.setGooglePrice(195.22);
+		
+	}
+
+}

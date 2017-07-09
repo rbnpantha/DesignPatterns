@@ -1,0 +1,10 @@
+package edu.asd.iteratordesignpattern;
+
+public abstract MyName {
+
+	private abstract int name;
+	
+	public abstract getName(){
+		System.out.print("Rabin");
+	}
+}

@@ -1,0 +1,54 @@
+package edu.stockobserver;
+
+public class GrabStocks {
+	
+	public static void main(String[] args){
+		
+		/*create the subject object 
+		it will handle updating all observers
+		as well as deleting and adding them*/
+		
+		StockGrabber stockGrabber = new StockGrabber();
+		
+		//Create an observer where updates will be sent from subject
+		
+		StockObserver observer1 = new StockObserver(stockGrabber);
+		
+		stockGrabber.setIBMPrice(197.24);
+		stockGrabber.setApplePrice(278.54);
+		stockGrabber.setGooglePrice(185.22);
+		
+		StockObserver observer2 = new StockObserver(stockGrabber);
+		
+		stockGrabber.setIBMPrice(199.25);
+		stockGrabber.setApplePrice(288.54);
+		stockGrabber.setGooglePrice(195.22);
+		
+		//Delete one of the observers
+		
+		//stockGrabber.unregister(observer2);
+		
+		stockGrabber.setIBMPrice(159.25);
+		stockGrabber.setApplePrice(188.54);
+		stockGrabber.setGooglePrice(95.22);
+		
+		// create 3 threads using Runnable interface
+		// GetTheStock implements Runnable, so it doesn't waste
+		// its one extendable class option
+		
+		Runnable getIBM = new GetTheStock(stockGrabber, "IBM", 209.23);
+		Runnable getAPPLE = new GetTheStock(stockGrabber, "APPL", 303.35);
+		Runnable getGOOG = new GetTheStock(stockGrabber, "GOOG", 203.35);
+		
+		//Call for the code in run to execute
+		
+		new Thread(getIBM).start();
+		new Thread(getAPPL).start();
+		new Thread(getGOOG).start();
+		
+		
+		
+		
+	}
+
+}

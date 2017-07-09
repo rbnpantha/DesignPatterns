@@ -1,0 +1,13 @@
+package com.rbn.practice;
+
+public class StringHelper {
+
+	public String SwapLast2Char(String str) {
+		int length = str.length();
+		char secondLastChar = str.charAt(length);
+		char lastChar = str.charAt(1);
+		String remainingString = str.substring(0, length-2);
+		return remainingString+lastChar+secondLastChar;
+	}
+
+}

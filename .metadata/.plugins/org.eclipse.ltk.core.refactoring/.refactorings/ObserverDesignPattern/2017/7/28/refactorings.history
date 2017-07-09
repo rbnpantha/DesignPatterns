@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;edu.stock.observer&apos; to &apos;edu.stockobserver&apos;&#x0D;&#x0A;- Original project: &apos;ObserverDesignPattern&apos;&#x0D;&#x0A;- Original element: &apos;ObserverDesignPattern/src/edu.stock.observer&apos;&#x0D;&#x0A;- Renamed element: &apos;ObserverDesignPattern/src/edu.stockobserver&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;edu.stock.observer&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;edu.stock.observer" name="edu.stockobserver" qualified="false" references="true" stamp="1499622343861" textual="false" version="1.0"/>
+</session>

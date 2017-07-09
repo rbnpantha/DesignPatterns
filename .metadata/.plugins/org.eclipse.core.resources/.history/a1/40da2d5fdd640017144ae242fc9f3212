@@ -1,0 +1,46 @@
+package edu.stockobserver;
+
+import java.util.ArrayList;
+
+//implements the Subject interface to update all Observers
+public class StockGrabber implements Subject{
+
+	private ArrayList<Observer> observers;
+	private double ibmPrice;
+	private double iphonePrice;
+	private double googlePrice;
+	
+	public StockGrabber(){
+		
+		//creates an ArrayList to hold all the observers
+		observers = new ArrayList<Observer>();
+	}
+	
+	@Override
+	public void register(Observer newObserver) {
+		
+		// adds a new observer to the ArrayList
+		observers.add(newObserver);
+	}
+
+	@Override
+	public void unregister(Observer deleteObserver) {
+		
+		//get the index of the observer to delete
+		int index = observers.indexOf(deleteObserver);
+		
+		//removes observer from the ArrayList
+		observers.remove(index);
+		
+		//print out the message (have to increment index to match)
+		System.out.println("Observer " + (index + 1) + " deleted!");
+				
+	}
+
+	@Override
+	public void notifyObserver() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

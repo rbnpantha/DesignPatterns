@@ -1,0 +1,24 @@
+package edu.stockobserver;
+
+//implements the Subject interface to update all Observers
+public class StockGrabber implements Subject{
+
+	@Override
+	public void register(Observer o) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void unregister(Observer o) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void notifyObserver() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

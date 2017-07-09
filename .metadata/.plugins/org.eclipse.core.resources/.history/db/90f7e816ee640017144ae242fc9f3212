@@ -1,0 +1,27 @@
+package edu.stockobserver;
+
+public class GetTheStock implements Runnable{
+
+	private String stock;
+	private double  price;
+	
+	//Will hold reference to the StockGrabber object
+	private Subject stockGrabber;
+	
+	public GetTheStock(Subject stockGrabber, String newStock, double newPrice) {
+		//Store the reference to the stockGrabber object so
+		//I can make calls to its methods
+		this.stockGrabber = stockGrabber;
+		this.stock = newStock;
+		this.price = newPrice;
+	}
+	
+	
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

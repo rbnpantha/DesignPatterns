@@ -1,0 +1,31 @@
+package edu.stockobserver;
+
+import java.util.ArrayList;
+
+//implements the Subject interface to update all Observers
+public class StockGrabber implements Subject{
+
+	private ArrayList<Observer> observers;
+	private double ibmPrice;
+	private double iphonePrice;
+	private double googlePrice;
+	
+	@Override
+	public void register(Observer o) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void unregister(Observer o) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void notifyObserver() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
